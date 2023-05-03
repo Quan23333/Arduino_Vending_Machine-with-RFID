@@ -56,24 +56,6 @@ void loop()
   itemSelect('2', 2);
   itemSelect('3', 3);
   itemSelect('4', 4);
-
-  /*if (customKey){
-    Serial.println(customKey);
-    }*/
-
-  /*if (customKey == '1') {
-    Serial.println("Insert card to the reader...");
-    lcd.init();
-    lcd.setCursor(0, 0);
-    lcd.print("Item 1 selected");
-    lcd.setCursor(0, 1);
-    lcd.print("Pls Insert card");
-    while (cardStatu == false) {
-      rfidScaning("F0 BB 19 19", 1);
-    }
-    Serial.println("Break");
-    }*/
-
 }
 
 // Define pin connections & motor's steps per revolution
@@ -114,10 +96,6 @@ bool rfidScaning(String cardId, int var) {
   Serial.print("UID tag :");
   String content = "";
   byte letter;
-
-  //print
-  //lcd.setCursor(0, 0);
-  //lcd.print("Please, insert your card");
 
   for (byte i = 0; i < mfrc522.uid.size; i++)
   {
